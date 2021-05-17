@@ -14,7 +14,7 @@ public class HomeWork {
         int arr[] = {1, 1, 1, 2, 1};
         System.out.println("   " + equalSummaDelimiter(arr));
 
-        int number = -1;
+        int number = 1;
         int array[] = {4, 3, 5, 1};
         displaceArray(array, number);
 
@@ -172,12 +172,12 @@ public class HomeWork {
     }
 
     public static int[] oneDisplaceRight(int[] arr) {
-        int[] arrTime = new int[arr.length];
-        arrTime[0] = arr[arr.length - 1];
-        for (int i = 0; i < (arr.length - 1); i++) {
-            arrTime[i + 1] = arr[i];
+        int temp = arr[arr.length - 1];
+        for (int i = arr.length - 1; i > 0; i--) {
+            arr[i] = arr[i - 1];
         }
-        return arrTime;
+        arr[0] = temp;
+        return arr;
     }
 
     public static int[] oneDisplaceLeft(int[] arr) {
