@@ -39,10 +39,8 @@ public class HomeWork {
 
     public static void fillArray() {
         int[] mass = new int[8];
-        int result = 0;
         for (int i = 0; i < mass.length; i++) {
-            mass[i] = result;
-            result = result + 3;
+            mass[i] = i*3;
         }
         System.out.println("2)   " + Arrays.toString(mass));
     }
@@ -60,35 +58,45 @@ public class HomeWork {
     public static void fillDiagonalArray(int size) {
         int[][] mass = new int[size][size];
         System.out.println("4)");
+//        for (int i = 0; i < mass.length; i++) {
+//            for (int j = 0; j < mass.length; j++) {
+//                if (i == j) {
+//                    mass[i][j] = 1;
+//                } else if (mass.length-1-i == j){
+//                    mass[i][j] = 1;
+//                }
+//            }
+//
+//            System.out.println(Arrays.toString(mass[i]));
+//        }
         for (int i = 0; i < mass.length; i++) {
-            for (int j = 0; j < mass.length; j++) {
-                if (i == j) {
-                    mass[i][j] = 1;
-                    System.out.print(mass[i][j]);
-                }
-                System.out.print(" ");
-            }
-            System.out.println();
+            mass[i][i] = 1;
+            mass[mass.length - 1 - i][i] = 1;
+        }
+        for (int[] ints : mass) {
+            System.out.println(Arrays.toString(ints));
         }
     }
 
     public static void minAndMaxArray() {
         System.out.print("5) ");
-        int min = 100;
-        int max = 0;
         int[] mass = new int[10];
         for (int i = 0; i < mass.length; i++) {
-            mass[i] = (int) (Math.random() * min);
+            mass[i] = (int) (Math.random() * 100);
         }
         System.out.println(Arrays.toString(mass));
-        for (int i = 0; i < mass.length; i++) {
-            if (mass[i] >= max) {
+
+        int min = mass[0];
+        int max = mass[0];
+        for (int i = 1; i < mass.length; i++) {
+            if (mass[i] > max) {
                 max = mass[i];
             }
-            if (mass[i] <= min) {
+            if (mass[i] < min) {
                 min = mass[i];
             }
         }
+
         System.out.println("max = " + max);
         System.out.println("min = " + min);
     }
