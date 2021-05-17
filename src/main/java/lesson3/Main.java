@@ -7,14 +7,14 @@ import java.util.Scanner;
 public class Main {
     public static void main(String[] args) {
         skannerTesting();
-//        for (int i = 0; i < 100; i++) {
-//            randomTesting();
-//        }
-//        stringFormatTesting("Вася Привет, как у тебя сегодня дела?");
-//        stringFormatTesting(11);
-//        stringFormatTesting("Вася", 11);
-//        formattedPrint("Привет, %s! %s", "Вася", "(От Игоря)");
-//        formattedPrint("Привет, %s! %s %s", "Вася", "(От Игоря)");
+        for (int i = 0; i < 100; i++) {
+            randomTesting();
+        }
+        stringFormatTesting("Вася Привет, как у тебя сегодня дела?");
+        stringFormatTesting(11);
+        stringFormatTesting("Вася", 11);
+        formattedPrint("Привет, %s! %s", "Вася", "(От Игоря)");
+        formattedPrint("Привет, %s! %s %s", "Вася", "(От Игоря)");
     }
 
     public static void skannerTesting() {
