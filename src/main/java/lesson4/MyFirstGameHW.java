@@ -112,7 +112,9 @@ public class MyFirstGameHW {
                         return true;
                     }
                     takeBlockAiCoordinates(verticalWinSeries, i, j + 1, sym);
-                } else verticalWinSeries = 0;
+                } else {
+                    verticalWinSeries = 0;
+                }
             }
             horizontalWinSeries = 0;
         }
@@ -217,7 +219,9 @@ public class MyFirstGameHW {
             } while (isCellInvalid(x, y));
         } else {
             x = aiX;
+            aiX = -1;
             y = aiY;
+            aiY = -1;
         }
         System.out.printf("Компьютер походил в точку %d %d\n", x + 1, y + 1);
         map[y][x] = DOT_O;
