@@ -8,7 +8,7 @@ import java.nio.file.Files;
 public class StreamMain {
 
     public static void main(String[] args) throws Exception {
-        Files.copy()
+//        Files.copy();
 //        System.out.println("D:\\teaching\\javaCoreForAndroid\\lesson7");
 //        File file = new File("D:\\teaching\\javaCoreForAndroid\\lesson7\\test.txt");
 //
