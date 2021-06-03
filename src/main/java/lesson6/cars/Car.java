@@ -25,6 +25,10 @@ public abstract class Car {
         return maxSpeed;
     }
 
+    public String getVin() {
+        return vin;
+    }
+
     @Override
     public String toString() {
         return "Car{" +

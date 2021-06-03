@@ -2,6 +2,8 @@ package lesson6.cars;
 
 import org.omg.SendingContext.RunTime;
 
+import java.util.HashMap;
+
 public class CargoCar extends Car {
     private int maxWeight;
     public CargoCar(String vin, String engine, String color, int maxSpeed, int maxWeight) {
@@ -34,5 +36,19 @@ public class CargoCar extends Car {
                 " CargoCar{" +
                 "maxWeight=" + maxWeight +
                 '}';
+    }
+
+    @Override
+    public boolean equals(Object obj) {
+        if (obj instanceof CargoCar) {
+            CargoCar cargoCar = (CargoCar) obj;
+            return this.vin.equals(cargoCar.vin);
+        }
+        return false;
+    }
+
+    @Override
+    public int hashCode() {
+        return vin.hashCode();
     }
 }
