@@ -1,4 +1,4 @@
-package lesson9.exceptions;
+package lesson9.lesson.exceptions;
 
 public class MyClassException extends Exception {
     public MyClassException(String message) {

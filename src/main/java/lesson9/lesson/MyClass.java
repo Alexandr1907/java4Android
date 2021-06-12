@@ -1,6 +1,6 @@
-package lesson9;
+package lesson9.lesson;
 
-import lesson9.exceptions.MyClassException;
+import lesson9.lesson.exceptions.MyClassException;
 
 import java.util.Random;
 
