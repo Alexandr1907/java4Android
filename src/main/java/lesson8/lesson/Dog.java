@@ -1,6 +1,4 @@
-package lesson8;
-
-import lesson8.interfaces.Swimmable;
+package lesson8.lesson;
 
 import java.util.Random;
 

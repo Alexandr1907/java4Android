@@ -1,6 +1,6 @@
-package lesson8;
+package lesson8.lesson;
 
-import lesson8.interfaces.Swimmable;
+import lesson8.lesson.interfaces.Swimmable;
 
 public class Boat implements Swimmable {
     @Override
