@@ -8,7 +8,6 @@ public class Main {
 
     public static void main(String[] args) throws Exception {
         CyclicBarrier barrier = new CyclicBarrier(CARS_COUNT+1);
-        CountDownLatch latch = new CountDownLatch(CARS_COUNT);
         CountDownLatch finishLatch = new CountDownLatch(CARS_COUNT);
 
         System.out.println("ВАЖНОЕ ОБЪЯВЛЕНИЕ >>> Подготовка!!!");
@@ -19,7 +18,6 @@ public class Main {
         for (int i = 0; i < cars.length; i++) {
             cars[i] = new Car(race, 20 + (int) (Math.random() * 10));
             cars[i].setBarrier(barrier);
-            cars[i].setLatch(latch);
             cars[i].setFinishLatch(finishLatch);
         }
 
@@ -28,7 +26,7 @@ public class Main {
             new Thread(cars[i]).start();
         }
 
-        latch.await();
+        barrier.await();
         System.out.println("ВАЖНОЕ ОБЪЯВЛЕНИЕ >>> Гонка началась!!!");
 
         finishLatch.await();
